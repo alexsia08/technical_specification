@@ -13,6 +13,10 @@ const nextConfig = {
     unoptimized: true,
     domains: ["example.com", "another-domain.com"],
   },
+  transpilePackages: ["@ant-design", "rc-util", "antd"],
+  experimental: {
+    esmExternals: false,
+  },
   useFileSystemPublicRoutes: true,
 };
 
