@@ -41,7 +41,7 @@ export const CardGenerator = () => {
       createdAt: Date.now(),
     }));
     setCards((prev) => [...prev, ...newCards]);
-  }, [count, generateColor, getRandomCountdown]);
+  }, [count]);
 
   // Удаление карточек с истекшим временем
   const removeExpiredCards = () => {
