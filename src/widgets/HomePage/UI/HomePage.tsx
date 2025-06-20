@@ -3,8 +3,8 @@ import React from "react";
 import { CSSBoundingContainer } from "@/src/shared/styles";
 import { useTranslations } from "next-intl";
 import { Typography } from "antd";
-import { CSSTitle, CSSText } from "./styles";
-import { CardGenerator } from "../Library/constants/CardGenerator";
+import { CSSTitle, CSSTextP } from "./styles";
+import { CardGenerator } from "./CardGenerator";
 
 const { Title, Paragraph } = Typography;
 
@@ -16,7 +16,7 @@ export const HomePage: React.FC = () => {
       <Title level={2} style={CSSTitle}>
         {tHomePage("title")}
       </Title>
-      <Paragraph style={CSSText}>{tHomePage("text")}</Paragraph>
+      <Paragraph style={CSSTextP}>{tHomePage("text")}</Paragraph>
       <CardGenerator />
     </CSSBoundingContainer>
   );
