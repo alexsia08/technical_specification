@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { CSSBoundingContainer } from "@/src/shared/styles";
 import { useTranslations } from "next-intl";
 import {
@@ -33,7 +33,7 @@ export const CardGenerator = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   // Создание новых карточек
-  const generateNewCards = () => {
+  const generateNewCards = useCallback(() => {
     const newCards = Array.from({ length: count }, () => ({
       id: Math.random().toString(36).substring(2, 9),
       bgColor: generateColor(),
@@ -41,7 +41,7 @@ export const CardGenerator = () => {
       createdAt: Date.now(),
     }));
     setCards((prev) => [...prev, ...newCards]);
-  };
+  }, [count, generateColor, getRandomCountdown]);
 
   // Удаление карточек с истекшим временем
   const removeExpiredCards = () => {
@@ -76,13 +76,9 @@ export const CardGenerator = () => {
   // Для интервальной генерации
   useEffect(() => {
     if (!isActive) return;
-
-    const interval = setInterval(() => {
-      generateNewCards();
-    }, intervalTime * 1000);
-
+    const interval = setInterval(generateNewCards, intervalTime * 1000);
     return () => clearInterval(interval);
-  }, [isActive, count, intervalTime]);
+  }, [isActive, intervalTime, generateNewCards]);
 
   // Для проверки времени жизни карточек
   useEffect(() => {

@@ -7,10 +7,11 @@ const withNextIntl = createNextIntlPlugin(
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export" as const,
+  distDir: "build",
   trailingSlash: true,
   images: {
     unoptimized: true,
-    domains: ["", ""],
+    domains: ["example.com", "another-domain.com"],
   },
   useFileSystemPublicRoutes: true,
 };
