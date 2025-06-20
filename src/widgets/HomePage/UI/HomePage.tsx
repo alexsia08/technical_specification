@@ -1,0 +1,23 @@
+"use client";
+import React from "react";
+import { CSSBoundingContainer } from "@/src/shared/styles";
+import { useTranslations } from "next-intl";
+import { Typography } from "antd";
+import { CSSTitle, CSSText } from "./styles";
+import { CardGenerator } from "../Library/constants/CardGenerator";
+
+const { Title, Paragraph } = Typography;
+
+export const HomePage: React.FC = () => {
+  const tHomePage = useTranslations(`home-page`);
+
+  return (
+    <CSSBoundingContainer>
+      <Title level={2} style={CSSTitle}>
+        {tHomePage("title")}
+      </Title>
+      <Paragraph style={CSSText}>{tHomePage("text")}</Paragraph>
+      <CardGenerator />
+    </CSSBoundingContainer>
+  );
+};
