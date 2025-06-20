@@ -1,7 +1,7 @@
 {
   "name": "task",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/technical_specification",
+  "homepage": "https://alexsia08.github.io/technical_specification",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
