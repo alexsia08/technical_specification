@@ -49,7 +49,7 @@ export const CSSButton = styled.button(function () {
 export const CSSCards = styled.div(function () {
   return {
     width: "150px",
-    height: "150px",
+    height: "100px",
     borderRadius: "10px",
     padding: "10px",
     display: "flex",
