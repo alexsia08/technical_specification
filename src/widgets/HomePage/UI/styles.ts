@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import type { CSSProperties } from "react";
 
 export const CSSTitle: CSSProperties = {

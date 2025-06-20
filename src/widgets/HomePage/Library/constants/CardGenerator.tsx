@@ -32,16 +32,6 @@ export const CardGenerator = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [isActive, setIsActive] = useState<boolean>(false);
 
-  // Генерация случайного цвета
-  {
-    generateColor;
-  }
-
-  // Генерация случайного времени жизни (2-10 секунд)
-  {
-    getRandomCountdown;
-  }
-
   // Создание новых карточек
   const generateNewCards = () => {
     const newCards = Array.from({ length: count }, () => ({
