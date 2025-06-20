@@ -11,7 +11,7 @@ import {
   CSSLinia,
   CSSCardLocation,
   CSSCards,
-} from "../UI/styles";
+} from "./styles";
 import { Flex } from "antd";
 import { generateColor } from "@/src/shared/library/helper/color-random";
 import { getRandomCountdown } from "@/src/shared/library/helper/time-random";

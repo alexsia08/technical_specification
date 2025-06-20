@@ -3,8 +3,8 @@ import React from "react";
 import { CSSBoundingContainer } from "@/src/shared/styles";
 import { useTranslations } from "next-intl";
 import { Typography } from "antd";
-import { CSSTitle, CSSTextP } from "./styles";
-import { CardGenerator } from "./CardGenerator";
+import { CSSTitle, CSSTextP } from "../UI/styles";
+import { CardGenerator } from "@/src/widgets/CardGenerator";
 
 const { Title, Paragraph } = Typography;
 
