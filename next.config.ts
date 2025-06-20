@@ -6,15 +6,12 @@ const withNextIntl = createNextIntlPlugin(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-
+  output: "export" as const,
   trailingSlash: true,
-
   images: {
     unoptimized: true,
-    domains: ["test.dianet.ooo", "dianet.ooo"],
+    domains: ["", ""],
   },
-
   useFileSystemPublicRoutes: true,
 };
 
